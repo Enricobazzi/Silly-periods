@@ -1,5 +1,14 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+**/.ipynb_checkpoints/
 
 # Distribution / packaging
 .Python
+
+# Mac
+**/.DS_Store
+
+# R
+.Rproj.user
+.Rhistory
+Silly-periods.Rproj
