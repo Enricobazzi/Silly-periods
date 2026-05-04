@@ -29,7 +29,7 @@ python src/Depth/plot_depth.py \
 
 ## Subsample bams to 3X
 
-Since there are very low depth samples in our dataset (~1X) I will try to avoid batch effects by subsampling all bams to the same target depth. Bams with lower than than target depth will be copied and given the same name as subsampled bams by the script
+Since there are very low depth samples in our dataset (~1X) I will try to avoid batch effects by subsampling all bams to the same target depth. Bams with lower than than target depth will be copied and given the same name as subsampled bams by the [subsample_bam.sh](src/Depth/subsample_bam.sh) script:
 
 ```
 target_dp=3
