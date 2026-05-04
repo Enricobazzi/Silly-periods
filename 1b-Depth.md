@@ -4,10 +4,10 @@ Here I calculate average sequencing depth and subsample high depth individuals t
 
 ## Depth Calculation
 
-After obtaining bam files run the [depth_from_bam.sh](src/Alignment_QC/depth_from_bam.sh) to extract alignment depth from the bam:
+After obtaining bam files run the [depth_from_bam.sh](src/Depth/depth_from_bam.sh) to extract alignment depth from the bam:
 ```
 for bam in $(ls data/bams/*.bam); do
-  sbatch src/Alignment_QC/depth_from_bam.sh ${bam}
+  sbatch src/Depth/depth_from_bam.sh ${bam}
 done
 ```
 
