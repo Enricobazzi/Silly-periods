@@ -5,22 +5,11 @@ I used [ANGSD](https://www.popgen.dk/angsd/index.php/ANGSD) to obtain genotype l
 ## Selecting individuals
 
 The following datasets have been created to include samples for different objectives:
-- `full_herr` (n=362) includes all atlantic herring samples useful in the project (not only WP1 - so also historical Baltic herring)
 - `wp1_final_bal` (n=287) includes all atlantic herring samples for WP1 on Sillperiods (see [0-Dataset](0-Dataset.md))
 
-These are stored in the `data/bamlists/` folder where `${dataset}.sample_list.txt` has the list of individual names and `${dataset}.bamlist` has the list of bam files.
-
-They can be written from the [samples table](data/samples_table.csv) with the following code:
+These are stored in the `data/bamlists/` folder where `${dataset}.sample_list.txt` has the list of individual names and `${dataset}.bamlist` has the list of bam files. They can be written from the [samples table](data/samples_table.csv) with the following code:
 
 ```
-dataset=full_herr
-grep "harengus" data/samples_table.csv | \
-    grep -v NA | \
-    grep -vE "NW-ATL|Lamichh|MartinezBarrio|HER135" | \
-    awk -F',' '$9 == "current" || $10 >= 0.1' | \
-    cut -d',' -f1 \
-    > data/bamlists/${dataset}.sample_list.txt
-
 dataset=wp1_final_bal
 grep "yes" data/samples_table.csv > data/bamlists/${dataset}.sample_list.txt
 ```
@@ -36,13 +25,14 @@ for sample in $(cat data/bamlists/${dataset}.sample_list.txt); do
 done > data/bamlists/${dataset}.bamlist
 ```
 
+*NOTE: The `${dataset}` scheme might not be really useful in this case where I will only focus on using one `${dataset}`. Still, the code is best kept flexible always including the `${dataset}` part if future implementations need different subsets of individuals*
+
 ## Run ANGSD
 
 Using the `dataset` name, I run the [calculate_gtlike_angsd.sh](src/GenotypeLikelihoods/calculate_gtlike_angsd.sh) script to calculate genotype likelihoods of all the individuals in the dataset, which will be stored in `data/gtlike/${dataset}.beagle.gz`. This will include only biallelic SNPs with a minimum p-value of 1E-6, mapping quality above 30, base quality above 20, ignoring failed, duplicate, improperly paired and multi-hit reads, storing their position and allele frequencies in the `data/gtlike/${dataset}.mafs.gz` file.
 
 ```
-dataset=wp1_all
-dataset=full_herr
+dataset=wp1_final_bal
 
 sbatch \
     --job-name=${dataset}.gtlike \
