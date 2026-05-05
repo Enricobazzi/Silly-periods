@@ -65,7 +65,7 @@ We have generated new whole-genome sequences of herring individuals through [Sci
 In the [samples_table.csv](data/samples_table.csv) I store metadata regarding the sequences:  
 - sample_id: original sample name from publication or lab
 - species: *Clupea harengus* or *pallasi*
-- region: NW-atlantic, NE-atlantic, Baltic, transition zone ...
+- region: ...
 - location: more specific location
 - spawn: spawning season if known
 - year: of sampling or dating of remains/site
@@ -83,30 +83,27 @@ From the downloaded public data and the newly generated sequences we excluded (*
 - Lamichhaney et al. (2017) samples, because they have very low depth but metadata says it should be relatively high (not sure what is uploaded)
 - Martinez-Barrio et al. (2016) samples, because there are 8 samples but metadata says there are 16, and these 8 don't cluster with the rest of herring (not sure what is uploaded)
 - published historical genomes with depth < 0.1
-- newly generated historical sequences from the Baltic (saving for later paper)
+- newly generated and published historical sequences from the Baltic (saving for later paper)
 
 Summary of dataset for WP1 on Sill periods (*included = yes*):
-- 318 herring sequences (192 modern, 126 historical)
-- 61 Kattegat&Skagerrak herring:
+- 287 herring sequences (192 modern, 126 historical)
+- 61 Kattegat & Skagerrak herring:
     - 1 from 1500s: Nya Lodose (1)
     - 13 from 1747-1805 sillperiod: Masthugget (8) + Gullholmen (5)
     - 12 from 1874: Dynekilen (12)
     - 7 from 1877-1906 sillperiod: Koster (4) + Kalvsund (3)
     - 28 modern: Idefjord (13) + Maseskar (7) + Risor (8)
-- 86 North-Sea herring:
+- 86 North Sea herring:
     - 9 from 800-1300: York (6) + Lyminge (3)
     - 2 from 1400: Netherlands (2)
     - 21 from 1872-1875: Stavanger (3) + Haugesund (2) + Foldfjorden (15) + Scotland (1)
     - 21 from 1877-1906 sillperiod: Stavanger (7) + Haugesund (3) + Røvær (1) + Scotland (6) + Unknown Norway (4)
     - 33 modern: North-Sea (20) + Celtic Sea (3) + Downs (3) + Isle of Man (3) + Karmoy (4) 
-- 56 Belt&Baltic herring:
-    - 4 from 900-1380: Selso (4)
-    - 22 from 850-1400: Kolowbrzweg (3) + Truso (9) + Giecz (5) + MalaNieszawka (4) + KadriorgWreck (1)
+- 30 Baltic herring:
     - 30 modern: Blekinge (6) + Fehmarn (3) + Gavle (3) + Hastkar (8) + Kalix (6) + Kalmarsund (4)
 - 101 North-East Atlantic herring:
     - 101 modern: Faroe (27) + Iceland (30) + Norwegian Sea (40) + More (4)
-- 14 Other herring:
-    - 5 from 1100-1500: Basel (5)
+- 9 Other herring:
     - 9 from unknown year: unknown (4) + Bergen (5)
 
 ### Notes:
