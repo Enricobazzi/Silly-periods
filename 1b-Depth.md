@@ -11,7 +11,7 @@ for bam in $(ls data/bams/*.bam); do
 done
 ```
 
-### Plotting depth
+### Plotting Depth
 
 With this code we I obtain each sample's mean
 ```
