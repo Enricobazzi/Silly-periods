@@ -11,10 +11,11 @@ These are stored in the `data/bamlists/` folder where `${dataset}.sample_list.tx
 
 ```
 dataset=wp1_final_bal
-grep "yes" data/samples_table.csv > data/bamlists/${dataset}.sample_list.txt
+grep "yes" data/samples_table.csv | cut -d',' -f1 > data/bamlists/${dataset}.sample_list.txt
 ```
 
 ```
+dataset=wp1_final_bal
 for sample in $(cat data/bamlists/${dataset}.sample_list.txt); do
     if [[ -f data/bams/${sample}.subsampled_3X.bam ]]; then
       input_bam=data/bams/${sample}.subsampled_3X.bam

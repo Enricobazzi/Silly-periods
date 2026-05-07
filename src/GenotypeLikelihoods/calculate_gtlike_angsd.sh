@@ -20,4 +20,3 @@ angsd -GL 2 -nThreads 8 -doGlf 2 -doMajorMinor 1 -doMaf 2 -SNP_pval 1e-6 \
     -minMapQ 30 -minQ 20 -remove_bads 1 -only_proper_pairs 1 -uniqueOnly 1 -skipTriallelic 1 \
     -bam ${BAMLIST}/${dataset}.bamlist \
     -out ${OUTDIR}/${dataset}
-
