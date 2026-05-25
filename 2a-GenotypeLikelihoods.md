@@ -40,4 +40,24 @@ sbatch \
     --output=logs/GenotypeLikelihoods/gtlike.${dataset}.out \
     --error=logs/GenotypeLikelihoods/gtlike.${dataset}.err \
     src/GenotypeLikelihoods/calculate_gtlike_angsd.sh ${dataset}
+
+# or by chromosome
+chrs=($(grep NC_04 Reference/GCF_900700415.2_Ch_v2.0.2_genomic.fna.fai | cut -f1 | grep -v "NC_045174"))
+
+for chr in $(grep NC_04 Reference/GCF_900700415.2_Ch_v2.0.2_genomic.fna.fai | cut -f1); do
+    sbatch \
+        --job-name=${chr}.${dataset}.gtlike \
+        --output=logs/GenotypeLikelihoods/gtlike.${dataset}.${chr}.out \
+        --error=logs/GenotypeLikelihoods/gtlike.${dataset}.${chr}.err \
+        -p main --mem=512G \
+        src/GenotypeLikelihoods/calculate_gtlike_angsd_bychr.sh ${dataset} ${chr}
+done
+
+# concatenate chromosome beagles
+zcat data/gtlike/${dataset}.${chrs[0]}.beagle.gz > data/gtlike/${dataset}.beagle
+for chr in ${chrs[@]:1}; do
+    echo "${chr}"
+    zcat data/gtlike/${dataset}.${chr}.beagle.gz | tail -n +2 >> data/gtlike/${dataset}.beagle
+done
+gzip data/gtlike/${dataset}.beagle
 ```
