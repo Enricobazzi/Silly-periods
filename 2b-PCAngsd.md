@@ -38,7 +38,12 @@ To run PCAngsd on the genotype likelihoods of particular sites of a particular d
 ```
 dataset=wp1_final_bal
 sites=supplementary_file_7.v2
-sbatch src/angsd_matrix/pcangsd_sbatch.sh ${dataset} ${sites}
+
+sbatch \
+    --job-name=${dataset}.${sites}.pcangsd \
+    --output=logs/angsd_matrix/pcangsd.${dataset}.${sites}.out \
+    --error=logs/angsd_matrix/pcangsd.${dataset}.${sites}.err \
+    src/angsd_matrix/pcangsd_sbatch.sh ${dataset} ${sites}
 ```
 
 This will calculate a covariance matrix and store it in the file `data/pcangsd/${dataset}.${sites}.pcangsd.cov`, which I can analyze in R.
