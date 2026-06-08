@@ -30,7 +30,7 @@ done > data/bamlists/${dataset}.bamlist
 
 ## Run ANGSD
 
-Using the `dataset` name, I run the [calculate_gtlike_angsd.sh](src/GenotypeLikelihoods/calculate_gtlike_angsd.sh) script to calculate genotype likelihoods of all the individuals in the dataset, which will be stored in `data/gtlike/${dataset}.beagle.gz`. This will include only biallelic SNPs with a minimum p-value of 1E-6, mapping quality above 30, base quality above 20, ignoring failed, duplicate, improperly paired and multi-hit reads, storing their position and allele frequencies in the `data/gtlike/${dataset}.mafs.gz` file.
+Using the `dataset` name, I run the [calculate_gtlike_angsd.sh](src/GenotypeLikelihoods/calculate_gtlike_angsd.sh) script to calculate genotype likelihoods of all the individuals in the dataset, which will be stored in `data/gtlike/${dataset}.beagle.gz`. This will include only biallelic SNPs with a minimum p-value of 1E-6, mapping quality above 30, base quality above 30, ignoring failed, duplicate, improperly paired and multi-hit reads, storing their position and allele frequencies in the `data/gtlike/${dataset}.mafs.gz` file.
 
 ```
 dataset=wp1_final_bal
