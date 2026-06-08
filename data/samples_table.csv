@@ -36,36 +36,36 @@ sample_id,species,region,location,spawn,year,x,y,study,wg.depth,new.id,time,incl
 201750157,clupea_harengus,North_Atlantic,Faroe Islands,autumn,2017,-7.03463,61.88078,Kongsstovu_2022,2.310244,faroe_19,modern,yes,mh
 201750158,clupea_harengus,North_Atlantic,Faroe Islands,autumn,2017,-7.03463,61.88078,Kongsstovu_2022,1.893150,faroe_20,modern,yes,mh
 201750159,clupea_harengus,North_Atlantic,Faroe Islands,autumn,2017,-7.03463,61.88078,Kongsstovu_2022,1.716020,faroe_21,modern,yes,mh
-201750201,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,2.557799,iceland_1,modern,yes,mh
-201750202,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.479183,iceland_2,modern,yes,mh
-201750203,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,0.843634,iceland_3,modern,yes,mh
-201750204,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.042765,iceland_4,modern,yes,mh
-201750205,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.087351,iceland_5,modern,yes,mh
-201750206,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,0.640084,iceland_6,modern,yes,mh
-201750207,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.099165,iceland_7,modern,yes,mh
-201750212,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.387487,iceland_8,modern,yes,mh
-201750214,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.579838,iceland_9,modern,yes,mh
-201750215,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.159471,iceland_10,modern,yes,mh
-201750216,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.738990,iceland_11,modern,yes,mh
-201750217,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.625990,iceland_12,modern,yes,mh
-201750218,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.811082,iceland_13,modern,yes,mh
-201750219,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.127468,iceland_14,modern,yes,mh
-201750221,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.219315,iceland_15,modern,yes,mh
-201750222,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.181440,iceland_16,modern,yes,mh
-201750223,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,2.755304,iceland_17,modern,yes,mh
-201750224,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.684957,iceland_18,modern,yes,mh
-201750225,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.291477,iceland_19,modern,yes,mh
-201750226,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.500305,iceland_20,modern,yes,mh
-201750227,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.557081,iceland_21,modern,yes,mh
-201750228,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.108278,iceland_22,modern,yes,mh
-201750231,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.059408,iceland_23,modern,yes,mh
-201750232,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.956372,iceland_24,modern,yes,mh
-201750233,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.731239,iceland_25,modern,yes,mh
-201750234,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,2.864934,iceland_26,modern,yes,mh
-201750235,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,0.828609,iceland_27,modern,yes,mh
-201750236,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.722270,iceland_28,modern,yes,mh
-201750237,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.562869,iceland_29,modern,yes,mh
-201750238,clupea_harengus,North_Atlantic,Iceland,spring,2017,-19.09193,63.06307,Kongsstovu_2022,1.604630,iceland_30,modern,yes,mh
+201750201,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,2.557799,iceland_1,modern,yes,mh
+201750202,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.479183,iceland_2,modern,yes,mh
+201750203,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,0.843634,iceland_3,modern,yes,mh
+201750204,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.042765,iceland_4,modern,yes,mh
+201750205,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.087351,iceland_5,modern,yes,mh
+201750206,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,0.640084,iceland_6,modern,yes,mh
+201750207,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.099165,iceland_7,modern,yes,mh
+201750212,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.387487,iceland_8,modern,yes,mh
+201750214,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.579838,iceland_9,modern,yes,mh
+201750215,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.159471,iceland_10,modern,yes,mh
+201750216,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.738990,iceland_11,modern,yes,mh
+201750217,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.625990,iceland_12,modern,yes,mh
+201750218,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.811082,iceland_13,modern,yes,mh
+201750219,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.127468,iceland_14,modern,yes,mh
+201750221,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.219315,iceland_15,modern,yes,mh
+201750222,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.181440,iceland_16,modern,yes,mh
+201750223,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,2.755304,iceland_17,modern,yes,mh
+201750224,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.684957,iceland_18,modern,yes,mh
+201750225,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.291477,iceland_19,modern,yes,mh
+201750226,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.500305,iceland_20,modern,yes,mh
+201750227,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.557081,iceland_21,modern,yes,mh
+201750228,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.108278,iceland_22,modern,yes,mh
+201750231,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.059408,iceland_23,modern,yes,mh
+201750232,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.956372,iceland_24,modern,yes,mh
+201750233,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.731239,iceland_25,modern,yes,mh
+201750234,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,2.864934,iceland_26,modern,yes,mh
+201750235,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,0.828609,iceland_27,modern,yes,mh
+201750236,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.722270,iceland_28,modern,yes,mh
+201750237,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.562869,iceland_29,modern,yes,mh
+201750238,clupea_harengus,North_Atlantic,Iceland,summer,2017,-19.09193,63.06307,Kongsstovu_2022,1.604630,iceland_30,modern,yes,mh
 1552004523,clupea_harengus,Norway,Norwegian Sea,spring,2015,-1.84517,64.51262,Kongsstovu_2022,2.275458,norwegian_9,modern,yes,mh
 1552004524,clupea_harengus,Norway,Norwegian Sea,spring,2015,-1.84517,64.51262,Kongsstovu_2022,2.368995,norwegian_10,modern,yes,mh
 1552004526,clupea_harengus,Norway,Norwegian Sea,spring,2015,-1.84517,64.51262,Kongsstovu_2022,2.552523,norwegian_11,modern,yes,mh
