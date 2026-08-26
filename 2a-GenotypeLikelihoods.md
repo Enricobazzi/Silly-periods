@@ -42,7 +42,7 @@ sbatch \
     src/GenotypeLikelihoods/calculate_gtlike_angsd.sh ${dataset}
 
 # or by chromosome
-chrs=($(grep NC_04 Reference/GCF_900700415.2_Ch_v2.0.2_genomic.fna.fai | cut -f1 | grep -v "NC_045174"))
+chrs=($(grep NC_04 Reference/GCF_900700415.2_Ch_v2.0.2_genomic.fna.fai | cut -f1))
 
 for chr in $(grep NC_04 Reference/GCF_900700415.2_Ch_v2.0.2_genomic.fna.fai | cut -f1); do
     sbatch \
@@ -60,4 +60,12 @@ for chr in ${chrs[@]:1}; do
     zcat data/gtlike/${dataset}.${chr}.beagle.gz | tail -n +2 >> data/gtlike/${dataset}.beagle
 done
 gzip data/gtlike/${dataset}.beagle
+
+# concatenate chromosome mafs
+zcat data/gtlike/${dataset}.${chrs[0]}.mafs.gz > data/gtlike/${dataset}.mafs
+for chr in ${chrs[@]:1}; do
+    echo "${chr}"
+    zcat data/gtlike/${dataset}.${chr}.mafs.gz | tail -n +2 >> data/gtlike/${dataset}.mafs
+done
+gzip data/gtlike/${dataset}.mafs
 ```
