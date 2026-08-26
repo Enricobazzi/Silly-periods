@@ -63,14 +63,12 @@ zcat data/gtlike/${dataset}.mafs.gz | cut -f1,2 | tail -n +2 | awk '{print $1, $
     > data/sites/${dataset}.bed
 
 # use intersect to get mask
-sites=sf7_noinv.v2
-sites=salinity_genes.v2
-sites=spring_v_autumn.v2
-
-bedtools intersect -c \
-    -a data/sites/${dataset}.bed \
-    -b data/sites/${sites}.bed \
-    | cut -f4 > data/sites/${dataset}.${sites}.sitemask
+for sites in sf7_noinv.v2 salinity_genes.v2 spring_v_autumn.v2; do
+    bedtools intersect -c \
+        -a data/sites/${dataset}.bed \
+        -b data/sites/${sites}.bed \
+        | cut -f4 > data/sites/${dataset}.${sites}.sitemask
+done
 ```
 
 ## Run PCAngsd
@@ -79,13 +77,14 @@ To run PCAngsd on the genotype likelihoods of particular sites of a particular d
 
 ```
 dataset=wp1_final_bal
-sites=supplementary_file_7.v2
 
-sbatch \
-    --job-name=${dataset}.${sites}.pcangsd \
-    --output=logs/angsd_matrix/pcangsd.${dataset}.${sites}.out \
-    --error=logs/angsd_matrix/pcangsd.${dataset}.${sites}.err \
-    src/angsd_matrix/pcangsd_sbatch.sh ${dataset} ${sites}
+for sites in sf7_noinv.v2 salinity_genes.v2 spring_v_autumn.v2; do
+    sbatch \
+        --job-name=${dataset}.${sites}.pcangsd \
+        --output=logs/PCAngsd/pcangsd.${dataset}.${sites}.out \
+        --error=logs/PCAngsd/pcangsd.${dataset}.${sites}.err \
+        src/PCAngsd/run_pcangsd.sh ${dataset} ${sites}
+done
 ```
 
 This will calculate a covariance matrix and store it in the file `data/pcangsd/${dataset}.${sites}.pcangsd.cov`, which I can analyze in R.
