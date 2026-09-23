@@ -63,7 +63,7 @@ zcat data/gtlike/${dataset}.mafs.gz | cut -f1,2 | tail -n +2 | awk '{print $1, $
     > data/sites/${dataset}.bed
 
 # use intersect to get mask
-for sites in sf7_noinv.v2 salinity_genes.v2 spring_v_autumn.v2; do
+for sites in supplementary_file_7.v2 sf7_noinv.v2 salinity_genes.v2 spring_v_autumn.v2 ns_inversions.chr12; do
     bedtools intersect -c \
         -a data/sites/${dataset}.bed \
         -b data/sites/${sites}.bed \
@@ -78,9 +78,9 @@ To run PCAngsd on the genotype likelihoods of particular sites of a particular d
 ```
 dataset=wp1_final_bal
 
-for sites in sf7_noinv.v2 salinity_genes.v2 spring_v_autumn.v2; do
-    sbatch \
-        --job-name=${dataset}.${sites}.pcangsd \
+for sites in supplementary_file_7.v2 sf7_noinv.v2 salinity_genes.v2 spring_v_autumn.v2 ns_inversions.chr12; do
+    sbatch -p main \
+        --job-name=${sites}.${dataset}.pcangsd \
         --output=logs/PCAngsd/pcangsd.${dataset}.${sites}.out \
         --error=logs/PCAngsd/pcangsd.${dataset}.${sites}.err \
         src/PCAngsd/run_pcangsd.sh ${dataset} ${sites}
