@@ -142,16 +142,40 @@ done
 
 ### 3.3 estimate a site frequency spectrum
 
-I get an SFS by running `angsd -doSaf 1` on each bamlist (using `-noTrans 1` because of ancient data):
-`angsd -bam bam.filelist -doSaf 1 -anc chimpHg19.fa -GL 1 -P 24 -out out`
-
+I get a SAF file by running `angsd -doSaf 1` on each bamlist (using `-noTrans 1` because of ancient data):
 ```
 for dataset in bergen_stavenger_haugesund_unknown_bs celtic_downs_isleofman dynekilen foldfjorden gullholmen idefjord koster_kalvsund lyminge maseskar masthugget norwegian_mh risor scotland_sp stavenger_haugesund_norway_sp; do
     echo "${dataset}"
-    sbatch \
+    sbatch -p main \
         --job-name=${dataset}.dosaf \
         --output=logs/diversity/${dataset}.out \
         --error=logs/diversity/${dataset}.err \
         src/Diversity/angsd_dosaf.sh ${dataset}
+done
+```
+
+from the SAF I obtain the maximum likelihood estimate of the folded SFS using realSFS:
+```
+for dataset in bergen_stavenger_haugesund_unknown_bs celtic_downs_isleofman dynekilen foldfjorden gullholmen idefjord koster_kalvsund lyminge maseskar masthugget norwegian_mh risor scotland_sp stavenger_haugesund_norway_sp; do
+    echo "${dataset}"
+    sbatch -p main \
+        --job-name=${dataset}.sfs \
+        --output=logs/diversity/${dataset}.out \
+        --error=logs/diversity/${dataset}.err \
+        src/Diversity/realsfs_folded.sh ${dataset}
+done
+```
+
+### 3.4 calculate per-site thetas
+
+I use realSFS saf2theta to calculate thetas for each site from the SAF file and the sfs:
+```
+for dataset in bergen_stavenger_haugesund_unknown_bs celtic_downs_isleofman dynekilen foldfjorden gullholmen idefjord koster_kalvsund lyminge maseskar masthugget norwegian_mh risor scotland_sp stavenger_haugesund_norway_sp; do
+    echo "${dataset}"
+    sbatch -p main \
+        --job-name=${dataset}.theta \
+        --output=logs/diversity/${dataset}.out \
+        --error=logs/diversity/${dataset}.err \
+        src/Diversity/realsfs_saf2theta.sh ${dataset}
 done
 ```
